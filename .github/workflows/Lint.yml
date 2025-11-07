@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v3
       
       - name: Install NodeJs
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
@@ -18,3 +18,9 @@ jobs:
 
       - name: Run Lint
         run: npm run lint
+
+      - name: Test App
+        run: npm run test
+
+      - name : Bulild App
+        run: npm run build 
